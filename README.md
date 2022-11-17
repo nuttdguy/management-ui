@@ -4,6 +4,7 @@ Angular UI for a management app.
 
 FRONT-END TECH:
 - Angular
+- TypeScript
 - Tailwind CSS
 
 

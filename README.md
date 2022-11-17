@@ -1,5 +1,15 @@
 # ManagementUi
 
+Client-side Angular UI built for a management app.
+
+FRONT-END TECH:
+- Angular
+- Tailwind CSS
+
+
+<img width="1013" alt="management-ui-restaurants" src="https://user-images.githubusercontent.com/6646024/202349415-a598652c-341f-4698-a452-aa50906c304d.PNG">
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 
 ## Development server

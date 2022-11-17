@@ -1,6 +1,6 @@
 # ManagementUi
 
-Client-side Angular UI built for a management app.
+Angular UI for a management app.
 
 FRONT-END TECH:
 - Angular

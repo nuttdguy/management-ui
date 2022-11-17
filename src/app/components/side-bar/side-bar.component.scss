@@ -1,13 +1,21 @@
+.sidebar-menu-expand {
+  @apply flex h-[calc(100vh-90px)] w-full  translate-x-0 transform flex-col items-start justify-start rounded border-r border-b border-gray-200 transition duration-500  ease-in-out sm:w-64;
+}
+
+.sidebar-menu-close {
+  @apply flex h-full  w-full -translate-x-full transform flex-col items-start justify-start rounded border-r border-b border-gray-200 transition  duration-500 ease-in-out sm:w-64;
+}
+
 .sidebar-menu-header {
-  @apply hidden w-full items-center justify-start space-x-3 border-b border-gray-200 p-6 xl:flex;
+  @apply w-full shrink-0 items-center justify-start space-x-3 border-b border-gray-200 p-6;
 }
 
 .sidebar-menu-title {
-  @apply text-2xl leading-6 text-gray-800;
+  @apply text-2xl uppercase leading-6 text-gray-800;
 }
 
 .sidebar-menu-body {
-  @apply mt-6 flex w-full flex-col items-center justify-start space-y-3 px-4 pb-5;
+  @apply mt-6 flex h-full w-full flex-col items-center justify-start space-y-3 px-4 pb-5;
 }
 
 .sidebar-menu-li {
@@ -15,7 +23,7 @@
 }
 
 .sidebar-menu-footer {
-  @apply flex h-full w-full flex-col items-center justify-between space-y-80;
+  @apply flex w-full flex-col items-center justify-between space-y-80;
 }
 
 .sidebar-menu-footer-item {

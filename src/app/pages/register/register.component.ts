@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   FormGroup,
   FormControl,
   Validators,
   ValidationErrors,
 } from '@angular/forms';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-register',
@@ -12,6 +13,8 @@ import {
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
+  user: User = new User('userA', '', '');
+
   username = new FormControl('', [Validators.required, Validators.email]);
   firstname = new FormControl('', [Validators.required]);
   lastname = new FormControl('', [Validators.required]);

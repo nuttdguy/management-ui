@@ -1,0 +1,31 @@
+.page-container {
+  @apply flex h-full w-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1010&q=80')] from-slate-500 bg-cover;
+}
+
+.center-container {
+  @apply flex max-h-max min-h-[400px] w-7/12 rounded bg-[rgba(255,255,255,0.9)] pt-1 pb-8 shadow-md;
+}
+
+.tabs-container {
+  @apply flex h-full w-full flex-col gap-6;
+}
+
+.tab {
+  @apply flex w-full items-end border-b border-solid border-black text-left align-bottom text-3xl font-medium;
+}
+
+.tab-label {
+  @apply h-full w-4/12 cursor-pointer px-8 pt-8 pb-6 uppercase last:w-8/12;
+}
+
+.tab-label-border {
+  @apply border-l border-solid border-black;
+}
+
+.tab-label-hover {
+  @apply hover:text-[rgba(57,56,60,0.82)] hover:underline-offset-4;
+}
+
+.tab-label-hover {
+  @apply hover:border-b hover:border-l hover:border-solid hover:border-[rgba(109,24,255,0.82)];
+}

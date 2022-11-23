@@ -1,0 +1,19 @@
+.form {
+  @apply flex w-full flex-col items-center justify-center gap-y-3 px-8 font-bold text-black;
+}
+
+.input {
+  @apply mt-4 mb-2 w-10/12 border-collapse border-b-2 border-solid border-black bg-transparent py-2 text-xl text-black placeholder-black placeholder-opacity-30;
+}
+
+.input-effect {
+  @apply focus-visible:border-[rgba(109,24,255,0.82)] focus-visible:outline-none;
+}
+
+.btn {
+  @apply mx-2 my-8 w-10/12 justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-black;
+}
+
+.btn-effect {
+  @apply hover:border-[rgba(109,24,255,0.82)];
+}

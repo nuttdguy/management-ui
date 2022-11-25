@@ -1,8 +1,5 @@
-<!-- <div class="center-container"> -->
-
-<form class="form">
-  <input class="input input-effect" placeholder="Email" />
-  <input class="input input-effect" placeholder="Password" />
-  <button class="btn btn-effect">Submit</button>
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+  <app-input class="input-wrap" [control]="userName" placeholder="Email / UserName"></app-input>
+  <app-input class="input-wrap" [control]="password" placeholder="Password"></app-input>
+  <button class="btn btn-effect" [disabled]="loginForm.invalid">Submit</button>
 </form>
-<!-- </div> -->

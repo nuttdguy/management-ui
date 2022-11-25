@@ -9,7 +9,7 @@ import { RegisterValidators } from 'src/app/validators/register.validators';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
-  user: User = new User('userA', '', '');
+  // user: User = new User('userA', '', '');
 
   userName = new FormControl('', [
     Validators.required,

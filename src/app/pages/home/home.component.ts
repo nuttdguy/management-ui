@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  @Input() registerActive = false;
-  @Input() loginActive = true;
+  @Input() registerActive = !false;
+  @Input() loginActive = !true;
 
   constructor() {}
 

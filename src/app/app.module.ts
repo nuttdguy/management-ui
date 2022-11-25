@@ -18,6 +18,7 @@ import { EditDishComponent } from './pages/edit-dish/edit-dish.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -36,13 +37,7 @@ import { HomeComponent } from './pages/home/home.component';
     RegisterComponent,
     HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

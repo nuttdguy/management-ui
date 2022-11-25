@@ -3,11 +3,21 @@
 
     <div class="tabs-container">
       <div class="tab">
-        <label (click)="showLogin()" [ngClass]="{'text-[rgba(54,54,54,0.2)]': !loginActive}"
-               class="tab-label tab-label-border tab-label-hover">login</label>
-        <label (click)="showRegister()" [ngClass]="{'text-[rgba(54,54,54,0.2)]': !registerActive}"
-               class="tab-label tab-label-border tab-label-hover">register</label>
+        <label routerLink="/"
+               (click)="showLogin()"
+               [ngClass]="{'text-[rgba(54,54,54,0.2)]': !loginActive}"
+               class="tab-label tab-label-border tab-label-hover">
+          login
+        </label>
+        <label routerLink="/"
+               (click)="showRegister()"
+               [ngClass]="{'text-[rgba(54,54,54,0.2)]': !registerActive}"
+               class="tab-label tab-label-border tab-label-hover">
+          register
+        </label>
+
       </div>
+
       <app-login [class.hidden]="!loginActive"></app-login>
       <app-register [class.hidden]="!registerActive"></app-register>
     </div>

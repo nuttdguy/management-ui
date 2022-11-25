@@ -1,11 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  ValidationErrors,
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
+import { RegisterValidators } from 'src/app/validators/register.validators';
 
 @Component({
   selector: 'app-register',
@@ -15,27 +11,39 @@ import { User } from 'src/app/models/user';
 export class RegisterComponent {
   user: User = new User('userA', '', '');
 
-  username = new FormControl('', [Validators.required, Validators.email]);
-  firstname = new FormControl('', [Validators.required]);
-  lastname = new FormControl('', [Validators.required]);
+  userName = new FormControl('', [
+    Validators.required,
+    Validators.email,
+    Validators.minLength(2),
+  ]);
+  firstName = new FormControl('', [
+    Validators.required,
+    Validators.minLength(2),
+  ]);
+  lastName = new FormControl('', [
+    Validators.required,
+    Validators.minLength(2),
+  ]);
   password = new FormControl('', [
     Validators.required,
-    Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm),
+    Validators.pattern(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$/gm
+    ),
   ]);
+  confirmPassword = new FormControl('', [Validators.required]);
 
-  registerForm = new FormGroup({
-    username: this.username,
-    password: this.password,
-    firstname: this.firstname,
-    lastname: this.lastname,
-  });
-
-  showMsg = false;
-  msg = 'Please complete the form ...';
+  registerForm = new FormGroup(
+    {
+      userName: this.userName,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      password: this.password,
+      confirmPassword: this.confirmPassword,
+    },
+    [RegisterValidators.match('password', 'confirmPassword')]
+  );
 
   register() {
-    this.showMsg = true;
-    this.msg = 'Your account has been created.';
-    // console.log(this.registerForm);
+    console.log(this.registerForm);
   }
 }

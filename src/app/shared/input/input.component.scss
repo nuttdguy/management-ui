@@ -1,0 +1,7 @@
+.input {
+  @apply mt-4 mb-2 w-full border-collapse border-b-2 border-solid border-black bg-transparent py-2 text-xl text-black placeholder-black placeholder-opacity-30;
+}
+
+.input-effect {
+  @apply focus-visible:border-[rgba(109,24,255,0.82)] focus-visible:outline-none;
+}

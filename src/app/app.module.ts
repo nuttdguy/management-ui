@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { AuthService } from './api/auth.service';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,14 @@ import { SharedModule } from './shared/shared.module';
     RegisterComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, SharedModule],
-  providers: [],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    SharedModule,
+  ],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

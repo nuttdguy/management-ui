@@ -7,9 +7,13 @@
 }
 
 .btn {
-  @apply mx-2 my-8 w-10/12 justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-black;
+  @apply mx-2 mt-8 w-10/12 cursor-pointer justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-[rgba(0,0,0,0.2)];
 }
 
 .btn-effect {
-  @apply hover:border-[rgba(109,24,255,0.82)]  focus:border-[rgba(109,24,255,0.82)];
+  @apply text-black  hover:border-[rgba(109,24,255,0.82)]  focus:border-[rgba(109,24,255,0.82)];
+}
+
+.forgot {
+  @apply ml-auto cursor-pointer px-12 text-sm italic text-[rgba(109,24,255,0.82)] underline;
 }

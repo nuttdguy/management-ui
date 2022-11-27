@@ -1,15 +1,19 @@
 interface IUser {
-  username: string;
+  userName: string;
+  firstName: string;
+  lastName: string;
   password: string;
-  confirm_password: string;
+  confirmPassword: string;
   role: string;
   token: string;
 }
 
-export class User implements Partial<IUser> {
+export class User {
   constructor(
-    public username: string,
+    public userName: string,
+    public firstName: string,
+    public lastName: string,
     public password: string,
-    public confirm_password: string
+    public confirmPassword: string
   ) {}
 }

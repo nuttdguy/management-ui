@@ -1,4 +1,5 @@
 <form [formGroup]="registerForm" (ngSubmit)="register()" class="form">
+  <p class="text-red-400 py-1">{{message}}</p>
   <app-input class="input-wrap" [control]="userName" placeholder="Email / Username"></app-input>
   <app-input class="input-wrap" [control]="firstName" placeholder="First Name"></app-input>
   <app-input class="input-wrap" [control]="lastName" placeholder="Last Name"></app-input>

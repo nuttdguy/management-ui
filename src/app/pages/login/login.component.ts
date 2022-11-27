@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  userName = new FormControl('', [Validators.required]);
+  userName = new FormControl('', [Validators.required, Validators.email]);
 
   password = new FormControl('', [Validators.required]);
 
@@ -18,5 +18,9 @@ export class LoginComponent {
 
   login() {
     console.log('logging in');
+  }
+
+  forgot() {
+    console.log('forgot');
   }
 }

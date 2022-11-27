@@ -1,7 +1,7 @@
 <form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
   <app-input class="input-wrap" [control]="userName" placeholder="Email / UserName"></app-input>
   <app-input class="input-wrap" [control]="password" placeholder="Password"></app-input>
-  <button *ngIf="loginForm.invalid" class="btn" [disabled]="loginForm.invalid">Login</button>
-  <button *ngIf="!loginForm.invalid" class="btn btn-effect">Login</button>
+  <button [ngClass]="loginForm.invalid ? 'btn' : 'btn btn-effect'"
+          [disabled]="loginForm.invalid">Login</button>
   <a class="forgot" (click)="forgot()">forgot password</a>
 </form>

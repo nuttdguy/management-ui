@@ -8,6 +8,8 @@ FRONT-END TECH:
 - Tailwind CSS
 
 
+![login-registration-collage](https://user-images.githubusercontent.com/6646024/203899606-e366e279-4b18-4986-80e6-a253ddbd7e2b.png)
+
 <img width="1013" alt="management-ui-restaurants" src="https://user-images.githubusercontent.com/6646024/202349415-a598652c-341f-4698-a452-aa50906c304d.PNG">
 
 

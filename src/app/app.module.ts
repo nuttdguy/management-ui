@@ -20,6 +20,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthService } from './api/auth.service';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AuthService } from './api/auth.service';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    NotFoundComponent,
   ],
   imports: [
     AppRoutingModule,

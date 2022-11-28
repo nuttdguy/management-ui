@@ -2,7 +2,7 @@
       [formGroup]="loginForm"
       (ngSubmit)="login()">
   <p class="text-red-400 py-1">{{message}}</p>
-  <app-input class="input-wrap" [control]="userName" placeholder="Email / UserName"></app-input>
+  <app-input class="input-wrap" [control]="userName" placeholder="Email / Username"></app-input>
   <app-input class="input-wrap" [control]="password" placeholder="Password"></app-input>
   <button [ngClass]="loginForm.invalid ? 'btn' : 'btn btn-effect'"
           [disabled]="loginForm.invalid">Login</button>

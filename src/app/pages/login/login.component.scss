@@ -2,18 +2,22 @@
   @apply flex w-full flex-col items-center justify-center gap-y-3 px-8 font-bold text-black;
 }
 
+.hide {
+  @apply hidden;
+}
+
 .input-wrap {
   @apply w-10/12;
 }
 
 .btn {
-  @apply mx-2 mt-8 w-10/12 cursor-pointer justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-[rgba(0,0,0,0.2)];
+  @apply mx-2 mt-8 w-10/12 justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-[rgba(0,0,0,0.2)];
 }
 
 .btn-effect {
-  @apply text-black  hover:border-[rgba(109,24,255,0.82)]  focus:border-[rgba(109,24,255,0.82)];
+  @apply cursor-pointer text-black hover:border-[rgba(109,24,255,0.82)]  focus:border-[rgba(109,24,255,0.82)];
 }
 
 .forgot {
-  @apply ml-auto cursor-pointer px-12 text-sm italic text-[rgba(109,24,255,0.82)] underline;
+  @apply flex w-10/12 cursor-pointer flex-row-reverse text-sm italic text-[rgba(109,24,255,0.82)] underline;
 }

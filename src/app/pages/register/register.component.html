@@ -4,6 +4,7 @@
   <app-input class="input-wrap" [control]="firstName" placeholder="First Name"></app-input>
   <app-input class="input-wrap" [control]="lastName" placeholder="Last Name"></app-input>
   <app-input class="input-wrap" [control]="password" placeholder="Password"></app-input>
-  <app-input class="input-wrap" [control]="confirmPassword" placeholder="ConfirmPassword"></app-input>
-  <button class="btn btn-effect" [disabled]="registerForm.invalid">Submit</button>
+  <app-input class="input-wrap" [control]="confirmPassword" placeholder="Confirm Password"></app-input>
+  <button [ngClass]="registerForm.invalid ? 'btn' : 'btn btn-effect'"
+          [disabled]="registerForm.invalid">Submit </button>
 </form>

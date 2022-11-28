@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { of } from 'rxjs';
 import { AuthService } from 'src/app/api/auth.service';
-import { User } from 'src/app/models/user';
 import { RegisterValidators } from 'src/app/validators/register.validators';
 
 @Component({
@@ -12,7 +10,7 @@ import { RegisterValidators } from 'src/app/validators/register.validators';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
   message: string = '';
 
   ngOnInit(): void {}
@@ -38,7 +36,7 @@ export class RegisterComponent implements OnInit {
   ]);
   confirmPassword = new FormControl('', [Validators.required]);
 
-  registerForm = new FormGroup(
+  registerForm: FormGroup = new FormGroup(
     {
       userName: this.userName,
       firstName: this.firstName,
@@ -50,42 +48,21 @@ export class RegisterComponent implements OnInit {
   );
 
   register() {
-    const user = new User(
-      this.registerForm.value.userName || '',
-      this.registerForm.value.firstName || '',
-      this.registerForm.value.lastName || '',
-      this.registerForm.value.password || '',
-      this.registerForm.value.confirmPassword || ''
-    );
-
-    this.authService.register(user).subscribe({
-      next: () => {
-        this.message =
-          'Account created. Check email to confirm and activate the account';
-        setTimeout(() => {
-          this.message = '';
-        }, 5000);
+    this.authService.register(this.registerForm).subscribe({
+      next: (res) => {
+        this.displayMessage(res);
         this.registerForm.reset();
       },
-      error: (error) => {
-        this.message = error.message;
-        setTimeout(() => {
-          this.message = '';
-        }, 5000);
+      error: (err) => {
+        this.displayMessage(err.error);
       },
     });
+  }
 
-    // this.authService.register(user).subscribe(
-    //   (response: any) => {
-    //     console.log(response.headers);
-    //     console.log(response);
-
-    //     this.router.navigate(['']);
-    //   },
-    //   (response) => {
-    //     console.log(response.error);
-    //     console.log(response.error.message);
-    //   }
-    // );
+  displayMessage(data: any) {
+    this.message = data.message;
+    setTimeout(() => {
+      this.message = '';
+    }, 10000);
   }
 }

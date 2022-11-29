@@ -9,7 +9,6 @@ import { RestaurantsComponent } from './pages/restaurants/restaurants.component'
 import { SideBarComponent } from 'src/app/side-bar/side-bar.component';
 import { TopBarComponent } from 'src/app/top-bar/top-bar.component';
 import { DashboardComponent } from 'src/app/pages/dashboard/dashboard.component';
-import { LayoutComponent } from './pages/layout/layout.component';
 import { AddRestaurantComponent } from './pages/add-restaurant/add-restaurant.component';
 import { EditRestaurantComponent } from './pages/edit-restaurant/edit-restaurant.component';
 import { DishesComponent } from './pages/dishes/dishes.component';
@@ -29,7 +28,6 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     SideBarComponent,
     TopBarComponent,
     DashboardComponent,
-    LayoutComponent,
     AddRestaurantComponent,
     EditRestaurantComponent,
     DishesComponent,

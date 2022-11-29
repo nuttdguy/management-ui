@@ -29,3 +29,7 @@ h5,
 h6 {
   margin: 0;
 }
+
+.section-container {
+  @apply top-80 left-0 flex min-h-[calc(100vh-70px)] w-full flex-initial flex-row px-8;
+}

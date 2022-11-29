@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddDishComponent } from './pages/add-dish/add-dish.component';
 import { AddRestaurantComponent } from './pages/add-restaurant/add-restaurant.component';
@@ -14,8 +14,9 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'dashboard',
+    component: DashboardComponent,
     children: [
-      { path: '', component: DashboardComponent },
+      { path: 'overview', component: DashboardComponent },
       { path: 'restaurants', component: RestaurantsComponent },
       { path: 'restaurants/add', component: AddRestaurantComponent },
       { path: 'restaurants/edit/:id', component: EditRestaurantComponent },

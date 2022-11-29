@@ -2,7 +2,7 @@
   @apply pt-6 text-2xl uppercase leading-6 text-gray-800;
 }
 
-.table {
+.table-main {
   @apply flex w-full flex-col whitespace-nowrap;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .tr-body {
-  @apply flex h-20 w-full flex-row items-center justify-items-start text-sm leading-none focus:outline-none;
+  @apply flex h-20 w-full flex-row items-center justify-items-center text-sm leading-none focus:outline-none;
 }
 
 .tr-head-title {
@@ -19,5 +19,33 @@
 }
 
 .td-body {
-  @apply flex-auto text-start text-sm leading-4 tracking-normal;
+  @apply flex text-start text-sm leading-4 tracking-normal;
+}
+
+.td-body-align-center {
+  @apply items-center justify-center;
+}
+
+.td-checkbox {
+  @apply relative h-5 w-5 cursor-pointer rounded border border-gray-400 bg-white;
+}
+
+.td-checkbox-effect {
+  @apply focus:outline-none focus:ring-2 focus:ring-gray-400  dark:bg-gray-800;
+}
+
+.td-image-wrap {
+  @apply flex h-full w-full flex-row items-center;
+}
+
+.btn-delete {
+  @apply cursor-pointer rounded border border-transparent bg-gray-100 p-2 text-red-500;
+}
+
+.btn-edit {
+  @apply cursor-pointer rounded border border-transparent bg-gray-100 p-2 text-gray-500;
+}
+
+.btn-effect {
+  @apply focus-within:shadow-gray-200 hover:bg-gray-200 focus:border-gray-800 focus:outline-none;
 }

@@ -5,15 +5,3 @@
 .topbar-content-wrap {
   @apply flex items-center;
 }
-
-.section-container {
-  @apply top-80 left-0 flex min-h-[calc(100vh-70px)] w-full flex-initial flex-row;
-}
-
-.sidebar-wrap {
-  @apply flex h-full w-3/12 uppercase;
-}
-
-.main-content-wrap {
-  @apply flex h-full w-9/12 flex-col uppercase;
-}

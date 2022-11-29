@@ -1,0 +1,29 @@
+.table {
+  @apply flex w-full flex-col whitespace-nowrap  px-4;
+}
+
+.table-head {
+  @apply border-b border-solid border-black;
+}
+
+.table-head,
+.table-body {
+  @apply h-full w-full;
+}
+
+.table-row-head,
+.table-body-data {
+  @apply flex h-full flex-row items-center  py-8 px-4 text-sm leading-3 focus:outline-none;
+}
+
+.table-head-title {
+  @apply border-x border-solid border-black;
+}
+
+.table-body-row {
+  @apply flex h-60 w-full border-b border-gray-200 text-black;
+}
+
+.table-body-data {
+  @apply flex-initial items-center justify-center whitespace-normal break-words leading-6;
+}

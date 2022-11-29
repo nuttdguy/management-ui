@@ -1,58 +1,143 @@
-<h2 class="table-title">
-  restaurants
-</h2>
-<table class="table-main">
-  <thead class="w-full">
-    <tr tabindex="0" class="tr-head">
-      <th class="tr-head-title w-1/12">id</th>
-      <th class="tr-head-title w-3/12">restaurant</th>
-      <th class="tr-head-title w-4/12">address</th>
-      <th class="tr-head-title w-1/12">phone</th>
-      <th class="tr-head-title w-1/12 justify-center flex">revenue</th>
-      <th class="tr-head-title w-2/12 justify-center flex">actions</th>
-    </tr>
-  </thead>
-  <tbody class="w-full">
-    <tr class="tr-body">
-      <td class="td-body w-1/12">
-        <input type="checkbox" class="td-checkbox"
-               onclick="tableInteract(this)" />
-      </td>
-      <td class="td-body w-3/12">
-        <div class="td-image-wrap">
-          <img class="w-4/12 rounded-tl-lg rounded-br-lg shadow-md"
-               src="https://plus.unsplash.com/premium_photo-1665669263531-cdcbe18e7fe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1825&q=80"
-               alt="UX Food & Festival" />
-          <div class="w-8/12 pl-4">
-            <p class="font-medium">UX food &amp; festival</p>
+<section class="pl-6 pr-6 h-full w-full overflow-auto">
+  <h2 class="table-title">
+    restaurants
+  </h2>
+
+  <table class="table-main">
+    <thead class="w-full">
+      <tr tabindex="0" class="tr-head">
+        <th class="tr-head-title w-1/12">id</th>
+        <th class="tr-head-title w-3/12">restaurant</th>
+        <th class="tr-head-title w-4/12">address</th>
+        <th class="tr-head-title w-1/12">phone</th>
+        <th class="tr-head-title w-1/12 justify-center flex">revenue</th>
+        <th class="tr-head-title w-2/12 justify-center flex">actions</th>
+      </tr>
+    </thead>
+    <tbody class="w-full">
+      <tr class="tr-body">
+        <td class="td-body-data w-1/12">
+          <input type="checkbox" class="td-checkbox"
+                 onclick="tableInteract(this)" />
+        </td>
+        <td class="td-body-data w-3/12">
+          <div class="td-image-wrap">
+            <img class="w-4/12 rounded-tl-lg rounded-br-lg shadow-md"
+                 src="https://plus.unsplash.com/premium_photo-1665669263531-cdcbe18e7fe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1825&q=80"
+                 alt="UX Food & Festival" />
+            <div class="w-8/12 pl-4">
+              UX food &amp; festival
+            </div>
           </div>
-        </div>
-      </td>
-      <td class="td-body w-4/12">
-        <p class="text-sm font-medium leading-none">777 festival Lane, Festival City, Festive, 77777</p>
-      </td>
-      <td class="td-body w-1/12">
-        <p class="font-medium">777-7777</p>
-      </td>
-      <td class="td-body w-1/12 td-body-align-center">
-        <p class="font-medium">$13,000</p>
-      </td>
-      <td class="td-body w-2/12 td-body-align-center">
-        <button class="btn-edit btn-effect">
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-               strokeWidth={1.5}
-               stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round"
-                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-          </svg>
-        </button>
+        </td>
+        <td class="td-body-data w-4/12 ">
+          777 festival Lane, Festival City, Festive, 77777
+        </td>
+        <td class="td-body-data w-1/12">
+          777-7777
+        </td>
+        <td class="td-body-data w-1/12 td-body-align-center">
+          $13,000
+        </td>
+        <td class="td-body-data w-2/12 td-body-align-center">
+          <button class="btn-edit btn-effect">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 strokeWidth={1.5}
+                 stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+            </svg>
+          </button>
 
-        <button class="btn-delete btn-effect">
-          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/compact_table_with_actions_and_select-svg5.svg"
-               alt="delete">
-        </button>
-      </td>
-    </tr>
+          <button class="btn-delete btn-effect">
+            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/compact_table_with_actions_and_select-svg5.svg"
+                 alt="delete">
+          </button>
+        </td>
+      </tr>
 
-  </tbody>
-</table>
+      <tr class="tr-body">
+        <td class="td-body-data w-1/12">
+          <input type="checkbox" class="td-checkbox"
+                 onclick="tableInteract(this)" />
+        </td>
+        <td class="td-body-data w-3/12">
+          <div class="td-image-wrap">
+            <img class="w-4/12 rounded-tl-lg rounded-br-lg shadow-md"
+                 src="https://plus.unsplash.com/premium_photo-1665669263531-cdcbe18e7fe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1825&q=80"
+                 alt="UX Food & Festival" />
+            <div class="w-8/12 pl-4">
+              UX food &amp; festival
+            </div>
+          </div>
+        </td>
+        <td class="td-body-data w-4/12 ">
+          777 festival Lane, Festival City, Festive, 77777
+        </td>
+        <td class="td-body-data w-1/12">
+          777-7777
+        </td>
+        <td class="td-body-data w-1/12 td-body-align-center">
+          $13,000
+        </td>
+        <td class="td-body-data w-2/12 td-body-align-center">
+          <button class="btn-edit btn-effect">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 strokeWidth={1.5}
+                 stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+            </svg>
+          </button>
+
+          <button class="btn-delete btn-effect">
+            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/compact_table_with_actions_and_select-svg5.svg"
+                 alt="delete">
+          </button>
+        </td>
+      </tr>
+
+      <tr class="tr-body">
+        <td class="td-body-data w-1/12">
+          <input type="checkbox" class="td-checkbox"
+                 onclick="tableInteract(this)" />
+        </td>
+        <td class="td-body-data w-3/12">
+          <div class="td-image-wrap">
+            <img class="w-4/12 rounded-tl-lg rounded-br-lg shadow-md"
+                 src="https://plus.unsplash.com/premium_photo-1665669263531-cdcbe18e7fe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1825&q=80"
+                 alt="UX Food & Festival" />
+            <div class="w-8/12 pl-4">
+              UX food &amp; festival
+            </div>
+          </div>
+        </td>
+        <td class="td-body-data w-4/12 ">
+          777 festival Lane, Festival City, Festive, 77777
+        </td>
+        <td class="td-body-data w-1/12">
+          777-7777
+        </td>
+        <td class="td-body-data w-1/12 td-body-align-center">
+          $13,000
+        </td>
+        <td class="td-body-data w-2/12 td-body-align-center">
+          <button class="btn-edit btn-effect">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 strokeWidth={1.5}
+                 stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+            </svg>
+          </button>
+
+          <button class="btn-delete btn-effect">
+            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/compact_table_with_actions_and_select-svg5.svg"
+                 alt="delete">
+          </button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>

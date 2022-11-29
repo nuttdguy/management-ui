@@ -1,5 +1,5 @@
 .table-title {
-  @apply pt-6 text-2xl uppercase leading-6 text-gray-800;
+  @apply w-full border-b border-solid border-gray-400 py-4 text-xl uppercase leading-6 text-gray-800;
 }
 
 .table-main {
@@ -11,19 +11,19 @@
 }
 
 .tr-body {
-  @apply flex h-20 w-full flex-row items-center justify-items-center text-sm leading-none focus:outline-none;
+  @apply flex h-20 w-full flex-row items-center justify-items-center text-sm capitalize leading-none focus:outline-none;
 }
 
 .tr-head-title {
-  @apply text-start font-bold uppercase tracking-widest;
+  @apply text-start font-medium uppercase tracking-wide;
 }
 
-.td-body {
-  @apply flex text-start text-sm capitalize leading-4 tracking-wide;
+.td-body-data {
+  @apply flex-initial items-center justify-center whitespace-normal break-words px-2 leading-6;
 }
 
 .td-body-align-center {
-  @apply items-center justify-center;
+  @apply flex items-center justify-center;
 }
 
 .td-checkbox {

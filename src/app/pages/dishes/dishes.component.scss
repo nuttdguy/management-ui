@@ -1,9 +1,9 @@
-.table {
-  @apply flex w-full flex-col whitespace-nowrap  px-4;
-}
+/* .table-main {
+  @apply flex w-full flex-col whitespace-nowrap px-4;
+} */
 
 .table-head {
-  @apply border-b border-solid border-black;
+  @apply border-b border-solid border-gray-400;
 }
 
 .table-head,
@@ -13,17 +13,25 @@
 
 .table-row-head,
 .table-body-data {
-  @apply flex h-full flex-row items-center  py-8 px-4 text-sm leading-3 focus:outline-none;
+  @apply flex h-full flex-row items-center py-4 text-sm leading-3 focus:outline-none;
 }
 
 .table-head-title {
-  @apply border-x border-solid border-black;
+  @apply border-x border-solid border-gray-400;
 }
 
 .table-body-row {
-  @apply flex h-60 w-full border-b border-gray-200 text-black;
+  @apply flex h-60 w-full border-b border-gray-200 text-gray-800;
 }
 
 .table-body-data {
-  @apply flex-initial items-center justify-center whitespace-normal break-words leading-6;
+  @apply flex-initial items-center justify-center whitespace-normal break-words px-2 leading-6;
+}
+
+.format-data {
+  @apply capitalize;
+}
+
+.btn-delete {
+  @apply text-base leading-none text-red-600 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-offset-2;
 }

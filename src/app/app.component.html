@@ -3,13 +3,16 @@
 </section>
 
 <div [ngClass]="{
-  'close-sidebar': !isActive,
-  'open-sidebar': isActive}" (click)="showMenu()">
-  <app-side-bar [ngClass]="{'hide-sidebar': !isActive, 'expand-sidebar': isActive}"></app-side-bar>
-</div>
+    'close-sidebar': !isActive,
+    'open-sidebar': isActive}" (click)="showMenu()"></div>
+
+<app-side-bar [ngClass]="{
+    'hide-sidebar': !isActive, 
+    'expand-sidebar': isActive}"></app-side-bar>
 
 <section [ngClass]="{
-  'content-full': !isActive,
-  'content-reduce': isActive}">
+    'content-full': !isActive,
+    'content-reduce': isActive}">
+
   <router-outlet></router-outlet>
 </section>

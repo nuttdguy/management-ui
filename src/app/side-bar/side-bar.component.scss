@@ -1,18 +1,27 @@
-.sidebar-menu-expand {
+/* .sidebar-menu-expand {
   background-color: ghostwhite;
-  @apply flex h-[calc(100vh-90px)] w-full translate-x-0 transform flex-col items-start justify-start rounded border-r border-b border-gray-200 transition duration-500  ease-in-out sm:w-64;
-}
+  @apply sticky top-20 flex h-[calc(100vh-80px)] w-full translate-x-0 transform flex-col items-start justify-start rounded border-r border-b border-gray-200 transition duration-500  ease-in-out sm:w-64;
+} */
 
-.sidebar-menu-close {
+/* .sidebar-menu {
+  background-color: ghostwhite;
+  @apply sticky top-20 flex h-[calc(100vh-80px)] flex-col;
+} */
+
+/* .sidebar-menu-close {
   @apply flex h-full  w-full -translate-x-full transform flex-col items-start justify-start rounded border-r border-b border-gray-200 transition  duration-500 ease-in-out sm:w-64;
-}
+} */
 
-.sidebar-menu-header {
-  @apply w-full shrink-0 items-center justify-start space-x-3 border-b border-gray-200 p-6;
-}
+/* .sidebar-menu-header {
+  @apply w-full shrink-0 items-center justify-start space-x-3 border-b border-gray-200 px-6 py-4;
+} */
 
-.sidebar-menu-title {
-  @apply text-2xl uppercase leading-6 text-gray-800;
+/* .sidebar-menu-title {
+  @apply text-xl uppercase leading-6 text-gray-800;
+} */
+
+.menu-header {
+  @apply w-full border-b border-solid border-gray-400 py-4 pt-2 pl-4 text-xl uppercase leading-6 text-gray-800;
 }
 
 .sidebar-menu-body {
@@ -20,17 +29,17 @@
 }
 
 .sidebar-menu-li {
-  @apply flex w-full items-center justify-start space-x-6 rounded py-3 pl-4 text-gray-800 hover:bg-indigo-700 hover:text-white focus:bg-indigo-700 focus:text-white focus:outline-none;
+  @apply flex w-full items-center justify-start space-x-2 rounded py-1 pl-4 text-gray-800 hover:bg-indigo-700 hover:text-white focus:bg-indigo-700 focus:text-white focus:outline-none;
 }
 
 .sidebar-menu-footer {
-  @apply flex w-full flex-col items-center justify-between space-y-80;
+  @apply flex w-full flex-col items-center justify-between;
 }
 
 .sidebar-menu-footer-item {
-  @apply flex w-full flex-col items-center justify-start space-y-3 border-t border-gray-200 px-4 pt-8 pb-6 pl-4;
+  @apply flex w-full flex-col items-center justify-start border-t border-gray-400 px-4 pt-4 pb-2 pl-4;
 }
 
 .sidebar-menu-label {
-  @apply cursor-pointer text-base uppercase leading-4;
+  @apply cursor-pointer text-base capitalize leading-4 tracking-wide;
 }

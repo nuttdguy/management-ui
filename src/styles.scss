@@ -7,6 +7,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow-y: hidden;
 }
 body {
   margin: 0;
@@ -30,6 +31,6 @@ h6 {
   margin: 0;
 }
 
-.section-container {
-  @apply top-80 left-0 flex min-h-[calc(100vh-70px)] w-full flex-initial flex-row;
+.main-container {
+  @apply flex h-full w-full flex-col overflow-auto;
 }

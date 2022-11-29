@@ -15,11 +15,11 @@
 }
 
 .tr-head-title {
-  @apply text-start font-bold uppercase;
+  @apply text-start font-bold uppercase tracking-widest;
 }
 
 .td-body {
-  @apply flex text-start text-sm leading-4 tracking-normal;
+  @apply flex text-start text-sm capitalize leading-4 tracking-wide;
 }
 
 .td-body-align-center {

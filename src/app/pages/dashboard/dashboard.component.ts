@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   status: boolean = false;
+
   sidebarHandler() {
     this.status = !this.status;
   }

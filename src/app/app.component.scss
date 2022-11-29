@@ -5,3 +5,27 @@
 .topbar-content-wrap {
   @apply flex items-center;
 }
+
+.close-sidebar {
+  @apply absolute z-40 flex h-full w-12 items-center justify-center hover:bg-[#f8f8ff];
+}
+
+.open-sidebar {
+  @apply absolute z-40 flex h-full w-0 items-center justify-center hover:bg-gray-200;
+}
+
+.hide-sidebar {
+  @apply relative hidden;
+}
+
+.expand-sidebar {
+  @apply relative h-full w-2/12;
+}
+
+.content-full {
+  @apply px-16;
+}
+
+.content-reduce {
+  @apply pl-[18%] pr-16;
+}

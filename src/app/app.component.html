@@ -2,4 +2,14 @@
   <app-top-bar class="topbar-content-wrap" role="banner"></app-top-bar>
 </section>
 
-<router-outlet></router-outlet>
+<div [ngClass]="{
+  'close-sidebar': !isActive,
+  'open-sidebar': isActive}" (click)="showMenu()">
+  <app-side-bar [ngClass]="{'hide-sidebar': !isActive, 'expand-sidebar': isActive}"></app-side-bar>
+</div>
+
+<section [ngClass]="{
+  'content-full': !isActive,
+  'content-reduce': isActive}">
+  <router-outlet></router-outlet>
+</section>

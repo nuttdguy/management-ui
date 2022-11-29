@@ -10,7 +10,7 @@ FRONT-END TECH:
 
 ![login-registration-collage](https://user-images.githubusercontent.com/6646024/203899606-e366e279-4b18-4986-80e6-a253ddbd7e2b.png)
 
-<img width="1013" alt="management-ui-restaurants" src="https://user-images.githubusercontent.com/6646024/202349415-a598652c-341f-4698-a452-aa50906c304d.PNG">
+<img width="946" alt="list-view" src="https://user-images.githubusercontent.com/6646024/204653282-76f15155-0c7b-4fe9-bccf-077420f08f3b.PNG">
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.

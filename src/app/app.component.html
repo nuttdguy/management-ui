@@ -2,13 +2,15 @@
   <app-top-bar class="topbar-content-wrap" role="banner"></app-top-bar>
 </section>
 
-<div [ngClass]="{
-    'close-sidebar': !isActive,
-    'open-sidebar': isActive}" (click)="showMenu()"></div>
+<input type="button" [ngClass]="{
+    'min-sidebar-btn': !isActive,
+    'extend-sidebar-btn': isActive } "
+       (click)="showMenu()" />
 
 <app-side-bar [ngClass]="{
     'hide-sidebar': !isActive, 
-    'expand-sidebar': isActive}"></app-side-bar>
+    'extend-sidebar': isActive}"
+              (logoutEmitter)="loggingOut($event)"></app-side-bar>
 
 <section [ngClass]="{
     'content-full': !isActive,

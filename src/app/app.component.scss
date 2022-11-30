@@ -6,14 +6,18 @@
   @apply flex h-full items-center py-2 px-4;
 }
 
-.close-sidebar {
+.min-sidebar-btn {
   @apply absolute z-40 flex h-full w-9 items-center justify-center hover:bg-[#f8f8ff];
 }
 
-.open-sidebar {
+.extend-sidebar-btn {
   left: 20%;
   top: 70px;
   @apply absolute z-40 flex h-full w-9 hover:bg-[#f8f8ff];
+}
+
+.hide-sidebar-btn {
+  @apply w-0;
 }
 
 .content-full {
@@ -28,7 +32,7 @@
   @apply hidden;
 }
 
-.expand-sidebar {
+.extend-sidebar {
   @apply absolute top-20 z-30 ml-4 w-1/5;
 }
 

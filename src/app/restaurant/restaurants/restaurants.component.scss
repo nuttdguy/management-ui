@@ -1,0 +1,7 @@
+.table-title {
+  @apply w-full border-b border-solid border-gray-400 py-4 text-xl uppercase leading-6 text-gray-800;
+}
+
+.table-main {
+  @apply flex w-full flex-col whitespace-nowrap;
+}

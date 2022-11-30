@@ -5,21 +5,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RestaurantsComponent } from './pages/restaurants/restaurants.component';
+import { RestaurantsComponent } from './restaurant/restaurants/restaurants.component';
 import { SideBarComponent } from 'src/app/side-bar/side-bar.component';
 import { TopBarComponent } from 'src/app/top-bar/top-bar.component';
-import { DashboardComponent } from 'src/app/pages/dashboard/dashboard.component';
-import { AddRestaurantComponent } from './pages/add-restaurant/add-restaurant.component';
-import { EditRestaurantComponent } from './pages/edit-restaurant/edit-restaurant.component';
-import { DishesComponent } from './pages/dishes/dishes.component';
-import { AddDishComponent } from './pages/add-dish/add-dish.component';
-import { EditDishComponent } from './pages/edit-dish/edit-dish.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { HomeComponent } from './pages/home/home.component';
+import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
+import { AddRestaurantComponent } from './restaurant/add-restaurant/add-restaurant.component';
+import { EditRestaurantComponent } from './restaurant/edit-restaurant/edit-restaurant.component';
+import { DishesComponent } from './dashboard/dishes/dishes.component';
+import { AddDishComponent } from './dashboard/add-dish/add-dish.component';
+import { EditDishComponent } from './dashboard/edit-dish/edit-dish.component';
+import { LoginComponent } from './home/login/login.component';
+import { RegisterComponent } from './home/register/register.component';
+import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthService } from './api/auth.service';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RestaurantModule } from './restaurant/restaurant.module';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     HttpClientModule,
     ReactiveFormsModule,
     SharedModule,
+    RestaurantModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

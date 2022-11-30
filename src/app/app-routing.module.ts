@@ -1,21 +1,22 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AddDishComponent } from './pages/add-dish/add-dish.component';
-import { AddRestaurantComponent } from './pages/add-restaurant/add-restaurant.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { DishesComponent } from './pages/dishes/dishes.component';
-import { EditDishComponent } from './pages/edit-dish/edit-dish.component';
-import { EditRestaurantComponent } from './pages/edit-restaurant/edit-restaurant.component';
-import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { RestaurantsComponent } from './pages/restaurants/restaurants.component';
+import { RouterModule, Routes, UrlSerializer } from '@angular/router';
+import { AddDishComponent } from './dashboard/add-dish/add-dish.component';
+import { AddRestaurantComponent } from './restaurant/add-restaurant/add-restaurant.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DishesComponent } from './dashboard/dishes/dishes.component';
+import { EditDishComponent } from './dashboard/edit-dish/edit-dish.component';
+import { EditRestaurantComponent } from './restaurant/edit-restaurant/edit-restaurant.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RestaurantsComponent } from './restaurant/restaurants/restaurants.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'dashboard',
+    // loadChildren: () => import('./dashboard/dashboard-routing.module').then(mod => mod.)
     children: [
-      { path: 'overview', component: DashboardComponent },
+      { path: '', component: DashboardComponent },
       { path: 'restaurants', component: RestaurantsComponent },
       { path: 'restaurants/add', component: AddRestaurantComponent },
       { path: 'restaurants/edit/:id', component: EditRestaurantComponent },
@@ -28,7 +29,20 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      enableTracing: false,
+      useHash: false,
+      scrollPositionRestoration: 'enabled',
+      paramsInheritanceStrategy: 'always',
+      relativeLinkResolution: 'corrected',
+      malformedUriErrorHandler: (
+        error: URIError,
+        urlSerializer: UrlSerializer,
+        url: string
+      ) => urlSerializer.parse('/not-found'),
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

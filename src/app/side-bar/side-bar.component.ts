@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../api/auth.service';
 
@@ -8,20 +8,15 @@ import { AuthService } from '../api/auth.service';
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent {
-  status: boolean = true;
-  sidebarHandler() {
-    this.status = !this.status;
-  }
   constructor(private authService: AuthService, private router: Router) {}
+
+  @Output()
+  logoutEmitter = new EventEmitter<boolean>();
 
   logout() {
     this.authService.logout();
-    // .subscribe({
-    //   next: (res) => {
-    //     this.router.navigate(['']);
-    //   },
-    //   error: (err) => console.error(err),
-    // });
     this.router.navigate(['']);
+
+    this.logoutEmitter.emit(true);
   }
 }

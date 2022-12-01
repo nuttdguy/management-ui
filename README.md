@@ -8,7 +8,7 @@ FRONT-END TECH:
 - Tailwind CSS
 
 
-![login-registration-collage](https://user-images.githubusercontent.com/6646024/203899606-e366e279-4b18-4986-80e6-a253ddbd7e2b.png)
+<img width="1029" alt="login-registration-collage" src="https://user-images.githubusercontent.com/6646024/204654888-46ed0063-f16a-4a7a-bcc7-38b5f67cd541.png">
 
 <img width="946" alt="list-view" src="https://user-images.githubusercontent.com/6646024/204653282-76f15155-0c7b-4fe9-bccf-077420f08f3b.PNG">
 

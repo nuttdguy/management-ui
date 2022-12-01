@@ -1,3 +1,4 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -29,17 +30,16 @@ export class LoginComponent {
 
   login() {
     this.authService.login(this.loginForm).subscribe({
-      next: (res) => {
-        console.log('login success ...');
-        this.router.navigate(['/dashboard']);
-        this.displayMessage(res);
+      next: (res: HttpResponse<any>) => {
+        this.authService.setUserToLocalStorage(res.headers);
+        this.router.navigate(['dashboard']);
       },
-      error: (err) => {
-        console.log(err);
+      error: (err: any) => {
         this.displayMessage({
           message: 'Username or Password is incorrect.',
         });
       },
+      complete: () => console.log('Login complete ...'),
     });
   }
 

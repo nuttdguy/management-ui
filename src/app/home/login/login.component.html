@@ -6,6 +6,8 @@
         <app-input class="input-wrap" [control]="userName" placeholder="Email / Username"></app-input>
         <app-input class="input-wrap" [control]="password" placeholder="Password"></app-input>
 
+        <!-- <pre>{{loginForm.value | json }}</pre> -->
+
         <button [ngClass]="loginForm.invalid ? 'btn' : 'btn btn-effect'"
                 [disabled]="loginForm.invalid">Login</button>
 
@@ -13,7 +15,7 @@
 </form>
 
 <form [ngClass]="{'form': isHidden, 'hide': !isHidden}"
-      [formGroup]="loginForm"
+      [formGroup]="forgotForm"
       (ngSubmit)="forgot()">
         <app-input class="input-wrap" [control]="userName" placeholder="Email / UserName"></app-input>
         <button [ngClass]="forgotForm.invalid ? 'btn' : 'btn btn-effect'"

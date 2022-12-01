@@ -41,7 +41,6 @@ export class LoginComponent {
       },
       complete: () => {
         this.loginForm.reset();
-        console.log('Login complete ...');
       },
     });
   }
@@ -56,7 +55,6 @@ export class LoginComponent {
       },
       complete: () => {
         this.forgotForm.reset();
-        console.log('Password forgot complete ...');
       },
     });
   }

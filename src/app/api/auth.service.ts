@@ -34,11 +34,22 @@ export class AuthService {
   public setAuthHeaderToLocalStorage(header: HttpHeaders) {
     localStorage.setItem(
       'user',
-      JSON.stringify({
-        userName: header.get('userName'),
-        jwt: header.get('authorization'),
-      })
+      JSON.stringify({ userName: header.get('userName') })
     );
+    localStorage.setItem(
+      'authToken',
+      JSON.stringify({ jwt: header.get('authorization') })
+    );
+  }
+
+  public getAuthToken(): string | null {
+    const authToken: string | null = localStorage.getItem('authToken');
+    return authToken ? JSON.parse(authToken).jwt : null;
+  }
+
+  public getUser(): string | null {
+    const user: string | null = localStorage.getItem('user');
+    return user ? JSON.parse(user).user : null;
   }
 
   public forgotPwd(formData: FormGroup): Observable<HttpResponse<any>> {

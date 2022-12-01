@@ -1,4 +1,4 @@
-import { HttpResponse } from '@angular/common/http';
+import { HttpContext, HttpResponse } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -31,7 +31,7 @@ export class LoginComponent {
   login() {
     this.authService.login(this.loginForm).subscribe({
       next: (res: HttpResponse<any>) => {
-        this.authService.setUserToLocalStorage(res.headers);
+        this.authService.setAuthHeaderToLocalStorage(res.headers);
         this.router.navigate(['dashboard']);
       },
       error: (err: any) => {
@@ -39,14 +39,25 @@ export class LoginComponent {
           message: 'Username or Password is incorrect.',
         });
       },
-      complete: () => console.log('Login complete ...'),
+      complete: () => {
+        this.loginForm.reset();
+        console.log('Login complete ...');
+      },
     });
   }
 
   forgot() {
     this.authService.forgotPwd(this.forgotForm).subscribe({
-      next: (res) => {},
-      error: (err) => {},
+      next: (res: HttpResponse<any>) => {
+        this.displayMessage(res.body);
+      },
+      error: (err) => {
+        this.displayMessage('Something went wrong ...');
+      },
+      complete: () => {
+        this.forgotForm.reset();
+        console.log('Password forgot complete ...');
+      },
     });
   }
 

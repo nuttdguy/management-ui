@@ -31,7 +31,7 @@ export class AuthService {
     });
   }
 
-  public setUserToLocalStorage(header: HttpHeaders) {
+  public setAuthHeaderToLocalStorage(header: HttpHeaders) {
     localStorage.setItem(
       'user',
       JSON.stringify({
@@ -41,8 +41,10 @@ export class AuthService {
     );
   }
 
-  public forgotPwd(formData: FormGroup) {
-    return this.httpClient.post('auth/forgot', formData.value);
+  public forgotPwd(formData: FormGroup): Observable<HttpResponse<any>> {
+    return this.httpClient.post('auth/password/forgot', formData.value, {
+      observe: 'response',
+    });
   }
 
   public logout() {

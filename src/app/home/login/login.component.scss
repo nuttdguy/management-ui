@@ -10,8 +10,8 @@
   @apply w-10/12;
 }
 
-.btn {
-  @apply mx-2 mt-8 w-10/12 justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-[rgba(0,0,0,0.2)];
+.btn-default {
+  @apply mx-2 mt-8 w-10/12 justify-center border-2 border-solid border-blue-900 bg-transparent py-4 px-4 text-2xl font-bold uppercase text-[rgba(0,0,0,0.3)];
 }
 
 .btn-effect {

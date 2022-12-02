@@ -13,7 +13,7 @@ export class AppComponent {
     this.isActive = !this.isActive;
   }
 
-  loggingOut(isLoggedOut: boolean) {
+  logOut(isLoggedOut: boolean) {
     this.isActive = !isLoggedOut;
     console.log('event emitted ', !isLoggedOut);
   }

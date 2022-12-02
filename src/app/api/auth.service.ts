@@ -42,16 +42,6 @@ export class AuthService {
     );
   }
 
-  public getAuthToken(): string | null {
-    const authToken: string | null = localStorage.getItem('authToken');
-    return authToken ? JSON.parse(authToken).jwt : null;
-  }
-
-  public getUser(): string | null {
-    const user: string | null = localStorage.getItem('user');
-    return user ? JSON.parse(user).user : null;
-  }
-
   public forgotPwd(formData: FormGroup): Observable<HttpResponse<any>> {
     return this.httpClient.post('auth/password/forgot', formData.value, {
       observe: 'response',
@@ -60,5 +50,24 @@ export class AuthService {
 
   public logout() {
     return this.httpClient.post('auth/logout', {});
+  }
+
+  public getAuthToken(): string | null {
+    const authToken: string | null = localStorage.getItem('authToken');
+    return authToken ? JSON.parse(authToken).jwt : null;
+  }
+
+  public getUser(): string | null {
+    const user: string | null = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+  }
+
+  public getUserRoles(): string | null {
+    const user: string | null = localStorage.getItem('user');
+    return user ? JSON.parse(user).roles : null;
+  }
+
+  public clear(): void {
+    localStorage.clear();
   }
 }

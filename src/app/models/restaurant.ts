@@ -1,9 +1,11 @@
+import { Photo } from './photo';
+
 export interface Restaurant {
   id: number;
-  restaurantName: string;
-  alias: string;
-  phone: string;
+  name: string;
   url: string;
-  category: number;
-  description: string;
+  phone: string;
+  address: {};
+  photos: Photo[];
+  user: {};
 }

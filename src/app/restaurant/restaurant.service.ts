@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AuthService } from '../api/auth.service';
+import { Restaurant } from '../models/restaurant';
 
 @Injectable({
   providedIn: 'root',
@@ -11,10 +13,10 @@ export class RestaurantService {
     private authService: AuthService
   ) {}
 
-  loadRestaurants() {
-    this.httpClient.get('/restaurants', {
+  loadRestaurants(): Observable<Restaurant[]> {
+    return this.httpClient.get<Restaurant[]>('restaurants', {
       headers: {
-        authorization: 'Bearer ' + this.authService.getJwt(),
+        authorization: 'Bearer ' + this.authService.getAuthToken(),
       },
     });
   }

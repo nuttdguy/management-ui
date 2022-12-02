@@ -10,7 +10,7 @@
 <app-side-bar [ngClass]="{
     'hide-sidebar': !isActive, 
     'extend-sidebar': isActive}"
-              (logoutEmitter)="loggingOut($event)"></app-side-bar>
+              (logoutEmitter)="logOut($event)"></app-side-bar>
 
 <section [ngClass]="{
     'content-full': !isActive,

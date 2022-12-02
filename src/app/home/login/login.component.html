@@ -11,7 +11,7 @@
         <button [ngClass]="loginForm.invalid ? 'btn-default' : 'btn-default btn-effect'"
                 [disabled]="loginForm.invalid">Login</button>
 
-        <a class="forgot" (click)="show()">Forgot password</a>
+        <a class="forgot" (click)="switchView()">Forgot password</a>
 </form>
 
 <form [ngClass]="{'form': isHidden, 'hide': !isHidden}"
@@ -24,6 +24,6 @@
         <button [ngClass]="forgotForm.invalid ? 'btn-default' : 'btn-default btn-effect'"
                 [disabled]="forgotForm.invalid">Reset</button>
 
-        <a class="forgot" (click)="show()">Go back to login</a>
+        <a class="forgot" (click)="switchView()">Go back to login</a>
 
 </form>

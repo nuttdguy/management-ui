@@ -59,7 +59,7 @@ export class LoginComponent {
     });
   }
 
-  show() {
+  switchView() {
     this.isHidden = !this.isHidden;
     console.log(this.isHidden);
   }

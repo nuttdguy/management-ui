@@ -2,9 +2,14 @@
   <app-top-bar class="topbar-content-wrap" role="banner"></app-top-bar>
 </section>
 
+<!-- implment and use ng-content to project the elements somehow with the selector attribute -->
+
+<ng-template #hiddenMenu></ng-template>
+
 <input type="button" [ngClass]="{
     'min-sidebar-btn': !isActive,
     'extend-sidebar-btn': isActive } "
+       *ngIf="isLoggedOut, else hiddenMenu"
        (click)="showMenu()" />
 
 <app-side-bar [ngClass]="{

@@ -1,0 +1,45 @@
+<section class="pl-6 pr-6 h-full w-full">
+  <table class="table w-full mt-3">
+    <thead class="table-head">
+      <tr tabindex="0" class="table-row-head ">
+        <th class="table-head-title w-3/12">Dish</th>
+        <th class="table-head-title  w-2/12">Name</th>
+        <th class="table-head-title  w-4/12">Description</th>
+        <th class="table-head-title  w-2/12">Price</th>
+        <th class="table-head-title  w-1/12">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-body">
+
+
+      <ng-container *ngFor="let dish of (dishes$ | async)">
+
+        <tr class="table-body-row">
+          <td class="table-body-data w-3/12 h-full  ">
+            <div class="bg-contain">
+              <img class="table-img"
+                   src={{dish.photos[0].photoUrl}}
+                   alt={{dish.name}} />
+            </div>
+          </td>
+          <td class="table-body-data w-2/12 format-data">
+            {{dish.name}}
+          </td>
+          <td class="table-body-data w-4/12">
+            {{dish.description}}
+          </td>
+          <td class="table-body-data w-2/12">
+            {{dish.price}}
+          </td>
+          <td class="table-body-data w-1/12 ">
+            <a routerLink="/dashboard/dish/delete" class="btn-delete">
+              Remove Item
+            </a>
+          </td>
+        </tr>
+
+      </ng-container>
+    </tbody>
+  </table>
+</section>

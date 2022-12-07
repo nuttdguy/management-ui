@@ -14,7 +14,6 @@ import { User } from '../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  // user: User;
   constructor(private httpClient: HttpClient) {}
 
   public register(formData: FormGroup) {
@@ -22,7 +21,7 @@ export class AuthService {
   }
 
   public login(formData: FormGroup): Observable<HttpResponse<any>> {
-    return this.httpClient.post('auth/login', null, {
+    return this.httpClient.post<HttpResponse<any>>('auth/login', null, {
       headers: {
         userName: formData.value.userName,
         password: formData.value.password,
@@ -43,13 +42,17 @@ export class AuthService {
   }
 
   public forgotPwd(formData: FormGroup): Observable<HttpResponse<any>> {
-    return this.httpClient.post('auth/password/forgot', formData.value, {
-      observe: 'response',
-    });
+    return this.httpClient.post<HttpResponse<any>>(
+      'auth/password/forgot',
+      formData.value,
+      {
+        observe: 'response',
+      }
+    );
   }
 
-  public logout() {
-    return this.httpClient.post('auth/logout', {});
+  public logout(): Observable<HttpResponse<any>> {
+    return this.httpClient.post<HttpResponse<any>>('auth/logout', {});
   }
 
   public getAuthToken(): string | null {

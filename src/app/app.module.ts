@@ -11,9 +11,9 @@ import { TopBarComponent } from 'src/app/top-bar/top-bar.component';
 import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { AddRestaurantComponent } from './restaurant/add-restaurant/add-restaurant.component';
 import { EditRestaurantComponent } from './restaurant/edit-restaurant/edit-restaurant.component';
-import { DishesComponent } from './dashboard/dishes/dishes.component';
-import { AddDishComponent } from './dashboard/add-dish/add-dish.component';
-import { EditDishComponent } from './dashboard/edit-dish/edit-dish.component';
+import { DishesComponent } from './dish/dishes/dishes.component';
+import { AddDishComponent } from './dish/add-dish/add-dish.component';
+import { EditDishComponent } from './dish/edit-dish/edit-dish.component';
 import { LoginComponent } from './home/login/login.component';
 import { RegisterComponent } from './home/register/register.component';
 import { HomeComponent } from './home/home.component';
@@ -21,19 +21,14 @@ import { SharedModule } from './shared/shared.module';
 import { AuthService } from './api/auth.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RestaurantModule } from './restaurant/restaurant.module';
+import { DishModule } from './dish/dish.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RestaurantsComponent,
     SideBarComponent,
     TopBarComponent,
     DashboardComponent,
-    AddRestaurantComponent,
-    EditRestaurantComponent,
-    DishesComponent,
-    AddDishComponent,
-    EditDishComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent,
@@ -46,6 +41,7 @@ import { RestaurantModule } from './restaurant/restaurant.module';
     ReactiveFormsModule,
     SharedModule,
     RestaurantModule,
+    DishModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

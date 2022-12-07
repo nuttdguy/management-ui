@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RestaurantTableRowComponent } from './restaurant-table-row/restaurant-table-row.component';
+import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
+import { EditRestaurantComponent } from './edit-restaurant/edit-restaurant.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 @NgModule({
-  declarations: [RestaurantTableRowComponent],
+  declarations: [
+    RestaurantsComponent,
+    AddRestaurantComponent,
+    EditRestaurantComponent,
+  ],
   imports: [CommonModule],
-  exports: [RestaurantTableRowComponent],
+  exports: [
+    RestaurantsComponent,
+    AddRestaurantComponent,
+    EditRestaurantComponent,
+  ],
 })
 export class RestaurantModule {}

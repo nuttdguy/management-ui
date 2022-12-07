@@ -1,10 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes, UrlSerializer } from '@angular/router';
-import { AddDishComponent } from './dashboard/add-dish/add-dish.component';
+import { AddDishComponent } from './dish/add-dish/add-dish.component';
 import { AddRestaurantComponent } from './restaurant/add-restaurant/add-restaurant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DishesComponent } from './dashboard/dishes/dishes.component';
-import { EditDishComponent } from './dashboard/edit-dish/edit-dish.component';
+import { DishesComponent } from './dish/dishes/dishes.component';
+import { EditDishComponent } from './dish/edit-dish/edit-dish.component';
 import { EditRestaurantComponent } from './restaurant/edit-restaurant/edit-restaurant.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';

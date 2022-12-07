@@ -3,12 +3,7 @@
 } */
 
 .table-head {
-  @apply border-b border-solid border-gray-400;
-}
-
-.table-head,
-.table-body {
-  @apply h-full w-full;
+  @apply w-full border-b border-solid border-gray-400;
 }
 
 .table-row-head,
@@ -21,15 +16,15 @@
 }
 
 .table-body-row {
-  @apply flex h-60 w-full border-b border-gray-200 text-gray-800;
+  @apply my-6 flex h-60 w-full overflow-auto border-b border-gray-200 text-gray-800 shadow-inner;
 }
 
 .table-body-data {
-  @apply flex-initial items-center justify-center whitespace-normal break-words px-2 leading-6;
+  @apply flex-initial items-center justify-center overflow-hidden whitespace-normal break-words px-4 leading-6;
 }
 
 .table-img {
-  @apply h-3/4 w-3/4 rounded-tl-md rounded-tr-md shadow-md;
+  @apply rounded-2xl;
 }
 
 .format-data {

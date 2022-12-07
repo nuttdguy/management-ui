@@ -10,13 +10,13 @@ FRONT-END TECH:
 Complete integrations:
 - Register and signup form
 - Jwt with Local Storage
-- Fetching Restaurants & dishes
+- Fetching Restaurants & Dishes
 - Handling CORS via proxy config
 
 Incomplete integrations:
-- edit restaurant & dishes
-- delete restaurant & dishes
-- update restaurant & dishes
+- Edit restaurant & dishes
+- Delete restaurant & dishes
+- Update restaurant & dishes
 
 Issues to resolve:
 - Sidebar hide and show

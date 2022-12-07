@@ -7,6 +7,19 @@ FRONT-END TECH:
 - TypeScript
 - Tailwind CSS
 
+Complete integrations:
+- Register and signup form
+- Jwt with Local Storage
+- Fetching Restaurants & dishes
+- Handling CORS via proxy config
+
+Incompleted integrations:
+- edit restaurant & dishes
+- delete restaurant & dishes
+- update restaurant & dishes
+
+Issues to resolve:
+- Sidebar hide and show
 
 <img width="1029" alt="login-registration-collage" src="https://user-images.githubusercontent.com/6646024/204654888-46ed0063-f16a-4a7a-bcc7-38b5f67cd541.png">
 
@@ -17,7 +30,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4001/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

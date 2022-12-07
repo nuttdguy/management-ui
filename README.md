@@ -13,7 +13,7 @@ Complete integrations:
 - Fetching Restaurants & dishes
 - Handling CORS via proxy config
 
-Incompleted integrations:
+Incomplete integrations:
 - edit restaurant & dishes
 - delete restaurant & dishes
 - update restaurant & dishes

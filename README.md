@@ -20,6 +20,7 @@ Incomplete integrations:
 
 Issues to resolve:
 - Sidebar hide and show
+- Errors do not clear when switching between links
 
 <img width="1029" alt="login-registration-collage" src="https://user-images.githubusercontent.com/6646024/204654888-46ed0063-f16a-4a7a-bcc7-38b5f67cd541.png">
 
